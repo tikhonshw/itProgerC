@@ -3,14 +3,16 @@
 #include <thread>
 #include <chrono>
 
+
 using std::cout;
+using std::string;
 using std::endl;
 using std::thread;
 using namespace std::chrono_literals;
 
-void nums_work(int till = 30) {
+void nums_work(int till = 30, int str = 0) {
 	for (int i = 1; i <= till; i++) {
-		cout << i << endl;
+		cout << i << "\t" << str << endl;
 		std::this_thread::sleep_for(200ms);
 	}
 }
@@ -20,8 +22,8 @@ int main() {
 
 	auto start = std::chrono::high_resolution_clock::now();
 
-	thread t1(nums_work, 30);
-	thread t2(nums_work, 40);
+	thread t1(nums_work, 30, 1);
+	thread t2(nums_work, 40, 2);
 
 	t1.join();
 	t2.detach();

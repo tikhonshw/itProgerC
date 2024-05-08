@@ -1,0 +1,57 @@
+git ini - для инициализации проекта
+git config --global user.name "tikhonshw" - установка глобального имени
+git config --global user.name - просмотр имени
+git config --global user.email "tikhonsh@gmail.com" - установка почты пользователя
+git add - добавление файлов в локальный репозиторий (режим ожидания)
+git status - просмотр статус файлов на загрузку
+git rm --cached main.cpp - удаление файла на загрузку (указывать полный путь, полный путь смотрим по git status)
+git rm --cached . - удалиь все файлы из ожидания на загрузку
+git add *.cpp *.h - загрузка в ожидание по маске
+git commit - добавление файлов из иста ожидания в локальный репозиторий, с ключом -m "добавляем описание"
+
+______________________
+игнорирование
+все исключения прописываются в файле .gitignore
+файл должен находиться в рядом с папкой .git
+
+
+______________________
+Удаление загрузки
+git reset --hard HEAD~1 - полное удаление коментарие + изменение кода
+git reset --soft HEAD~1 - удаление коментария БЕЗ правки кода
+
+
+______________________
+ВЕТВИ
+git branch forum - создание новой ветки
+git checkout forum  - переход на новую ветку
+git checkout master - переход на другую ветку
+git branch -D forum - удаление ветки
+
+для слияния:
+git checkout master - переходим на нужную ветку
+git merge forum  - объединяем с нужной веткой
+!!!! ОБЯЗАТЕЛЬНО ПЕРЕЙТИ НА ОСНОВНУЮ ВЕТКУ в которую надо слить информамацию из дочерней
+
+______________________
+Удаленный репозиторий
+git remote - просмотр информамации об удаленном репозитории
+git remote add origin https://github.com/tikhonshw/itProgerC.git - подключение к удаленному репозиторию
+git remote remove origin - отключить удленный репозиторий
+git push -u origin main - выгрузить все на удаленный репозиторий MAIN это мастер
+
+key terminal без срока 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
+
+git clone https://github.com/tikhonshw/itProgerC.git сначала клонируем репозиторий
+git config --global credential.helper cache - сохраняем в кеше настройки
+
+
+
+git add .
+git status 
+git commit -m "Создан файл README.md"
+git push -u origin master
+
+
+______________________
+git pull - синхронизировать проект с gitHub
