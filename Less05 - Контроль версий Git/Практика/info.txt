@@ -40,7 +40,7 @@ git remote add origin https://github.com/tikhonshw/itProgerC.git - подклю�
 git remote remove origin - отключить удленный репозиторий
 git push -u origin main - выгрузить все на удаленный репозиторий MAIN это мастер
 
-key terminal без срока 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
+key terminal без срока 
 
 git clone https://github.com/tikhonshw/itProgerC.git сначала клонируем репозиторий
 git config --global credential.helper cache - сохраняем в кеше настройки
