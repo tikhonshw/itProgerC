@@ -22,11 +22,11 @@ int main() {
 
 	auto start = std::chrono::high_resolution_clock::now();
 
-	thread t1(nums_work, 30, 1);
+	thread t1(nums_work, 50, 1);
 	thread t2(nums_work, 40, 2);
 
-	t1.join();
-	t2.detach();
+	t1.join(); //t1.detach(); 
+	t2.join();
 
 	// nums_work();
 	// nums_work(40);
