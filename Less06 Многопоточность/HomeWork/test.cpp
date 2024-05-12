@@ -13,16 +13,28 @@ int main() {
 
     std::cout << "#";
     std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+    fflush(stdout);
+
     std::cout << "\b#";
     std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+    fflush(stdout);
+
     std::cout << "#";
     std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+    fflush(stdout);
+
     std::cout << "#";
     std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+    fflush(stdout);
+
     std::cout << "\b\b#";
     std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+    fflush(stdout);
+
     std::cout << "#";
     std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+    fflush(stdout);
+
 
     std::cout << std::endl;
 
